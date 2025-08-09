@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Tilt Neon", sans-serif;
+            font-size: 20px;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+
+        a {
+            font-size: 15px;
+            text-decoration: none;
+            color: #000;
+        }
+        
+        body{
+            padding: 35px 0;
+        }
+        
+        .container{
+            padding-top: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 55px;
+        }
+
+        .subcontainer {
+            box-sizing: initial;
+            border-radius: 25px;
+            padding: 10px;
+            padding-bottom: 25px;
+            color: #000;
+            background-color: rgba(233, 233, 233, 0.692);
+            height: auto;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.199);
+        }
+        
+        .subcontainer .video video {
+            border-radius: 15px 15px 0px 0px;
+            width: 100%;
+        }
+        
+        .subcontainer .description {
+            padding: 35px 15px;
+        }
+        
+        h1{
+            padding-top: 15px;
+            padding-left: 15px;
+            font-size: 21px;
+        }
+        
+        .subcontainer2 {
+            border-radius: 28px;
+            padding: 15px;
+            color: #000;
+            background-color: rgba(233, 233, 233, 0.692);
+            height: auto;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.199);
+        }
+
+        .subcontainer2 .lecture-container {
+            background-color: rgba(233, 233, 233, 0.692);
+            padding: 0 15px 0 0;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 21px;
+            cursor: pointer;
+            box-shadow: 2px 4px 11px -6px rgba(0, 0, 0, 0.349);
+            transition: all 0.3s ease;
+        }
+
+        .subcontainer2 .lecture-container:hover {
+            scale: 1.05;
+            box-shadow: 2px 4px 11px 2px rgba(0, 0, 0, 0.199);
+        }
+
+        .subcontainer2 .lecture-container p {
+            font-size: 14px;
+        }
+        
+        .subcontainer2 .lecture-container img {
+            border-radius: 13px 0px 0px 13px;
+            width: 200px;
+            height: 100px;
+        }
+
+        .view-more {
+            background-color: rgb(44, 44, 44);
+            font-size: 14px;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 19px;
+            border: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .view-more:hover {
+            background-color: rgb(63, 63, 63);;
+        }
+
+        .view-more:active {
+            color: black;
+            background-color: rgb(201, 201, 201);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .next {
+            font-size: 14px;
+            background-color: rgb(44, 44, 44);
+            color: white;
+            padding: 11px 21px;
+            border-radius: 19px;
+            border: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .next:hover {
+            background-color: rgb(63, 63, 63);;
+        }
+
+        .next:active {
+            background-color: black;
+            color: rgb(201, 201, 201);
+        }
+
+        .previous {
+            color: rgb(44, 44, 44);
+            font-size: 14px;
+            background-color: rgb(233, 233, 233);
+            padding: 11px 21px;
+            border-radius: 19px;
+            border: solid 2px rgb(44, 44, 44);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .previous:hover {
+            background-color: rgb(212, 212, 212);;
+        }
+
+        .previous:active {
+            color: black;
+            background-color: rgb(151, 151, 151);
+        }
+
+        nav {
+            z-index: 999;
+            background-color: rgb(255, 255, 255);
+            font-family: "Tilt Neon", sans-serif;
+            font-size: 20px;
+            height: 56px;
+            width: 100%;
+            padding: 0 35px;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        span {
+            color: rgb(32, 177, 32);
+        }
+
+        nav .links a:not(:last-child) {
+            margin-right: 25px;
+        }
+
+        nav .logo, span {
+            font-size: 30px;
+            font-weight: 600;
+        }
+        
+        #lectures {
+            color: rgb(32, 177, 32);
+        }
+
+        .sidebar {
+            background-color: rgba(255, 255, 255, 0.144);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            padding: 0px;
+            height: 900px;
+            width: 400px;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0px;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            width: 100%;
+            height: 50px;
+            font-size: 19px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(0, 0, 0, 0.164);
+        }
+
+        .menu {
+            display: none;
+        }
+        
+        @media(max-width: 1400px) {
+            .subcontainer2 .lecture-container {
+            background-color: rgba(233, 233, 233, 0.692);
+            padding: 0 15px 0 0;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 21px;
+            cursor: pointer;
+            box-shadow: 2px 4px 11px -6px rgba(0, 0, 0, 0.349);
+            transition: all 0.3s ease;
+        }
+
+        .subcontainer2 .lecture-container:hover {
+            scale: 1.05;
+            box-shadow: 2px 4px 11px 2px rgba(0, 0, 0, 0.199);
+        }
+
+        .subcontainer2 .lecture-container p {
+            font-size: 14px;
+        }
+        
+        .subcontainer2 .lecture-container img {
+            border-radius: 13px 0px 0px 13px;
+            width: 150px;
+            height: auto;
+        }
+        }
+        
+        @media(max-width: 400px) {
+            
+            nav {
+                padding: 0 19px;
+            }
+
+            nav .logo {
+                font-size: 25px;
+            }
+
+            .sidebar {
+                width: 100vh;
+                inset: 0 0 0 0;
+            }
+            
+            .menu {
+                display: flex;
+            }
+            
+            .hide {
+                display: none;
+            } 
+
+            .container{
+                padding-top: 70px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 55px;
+            }
+
+            .subcontainer, .subcontainer2 {
+                width: 90%;
+            }
+
+            .subcontainer {
+                padding: 0 0 25px;
+            }
+
+            .subcontainer .video video {
+                width: 100%;
+            }
+            
+            .subcontainer2 {
+                padding: 10px;
+                border-radius: 23px;
+            }
+            
+            .subcontainer2 .lecture-container p {
+                font-size: 14px;
+            }
+
+            .subcontainer2 .lecture-container img {
+                border-radius: 13px 0px 0px 13px;
+                width: 110px;
+                height: 100px;
+            }
+            
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <a class="logo" href="../index.html">BiO<span>b</span>ria</a>
+        <div class="sidebar" >
+            <a onclick="closesidebar()" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></a>
+            <a href="../profile.html">Profile</a>
+            <a href="../lectures.html" id="lectures">Lectures</a>
+            <a href="../researches.html">Researches</a>
+            <a href="../events.html">Events</a>
+        </div>
+
+        <div class="links">
+            <a class="hide" href="../profile.html">Profile</a>
+            <a class="hide" href="../lectures.html" id="lectures">Lectures</a>
+            <a class="hide" href="../researches.html">Researches</a>
+            <a class="hide" href="../events.html">Events</a>
+            <a onclick="showsidebar()" class="menu" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="subcontainer">
+            <div class="video">
+                <video src="assets2/Wildlife.mp4" controls autoplay loop></video>
+                <h1>Lecture-1 : Mitochondria and it's structure</h1>
+            </div>
+            <div class="description" style="font-size: 15px;">
+                Mitochondria are membrane-bound organelles found in the 
+                cytoplasm of eukaryotic cells. Often referred to as the 
+                "powerhouses" of the cell, their primary function is to 
+                produce adenosine triphosphate (ATP), the cell's main 
+                energy source, through a process called cellular 
+                respiration. Mitochondria have their own DNA and 
+                ribosomes, allowing them to replicate independently 
+                of the cell. They also play a role in regulating 
+                cellular metabolism, calcium balance, and apoptosis 
+                (programmed cell death). Due to their unique features, 
+                mitochondria are thought to have originated from ancient 
+                symbiotic bacteria.
+            </div>
+            <div class="buttons">
+                <button class="previous">Previous</button>
+                <button class="next">Next</button>
+            </div>
+        </div>
+        <div class="subcontainer2">
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            <div class="lecture-container">
+                <img src="assets2/img4.jpg" alt="lecture">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Molestiae, magnam
+                </p>
+            </div>
+            
+            <a href="../lectures.html">
+                <button class="view-more">View More</button>
+            </a>
+            
+        </div>
+    </div>
+
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex';
+        }
+
+        function closesidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none';
+        }
+        
+    </script>
+    
+</body>
+</html>
