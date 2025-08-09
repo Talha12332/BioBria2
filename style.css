@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Edu+SA+Hand:wght@400..700&family=Playwrite+DE+Grund:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.background {
+    z-index: -1;
+    height: 200%;
+    width: 200%;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+}
+
+.background img {
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: scale(1);
+}
+
+a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav {
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+    height: 56px;
+    width: 100%;
+    padding: 0 35px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span {
+    color: rgb(32, 177, 32);
+}
+
+nav .links a:not(:last-child) {
+    margin-right: 25px;
+}
+
+nav .logo, span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+header {
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .name {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+header .name p {
+    z-index: -1;
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+header .name .G {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveG 0.5s 1s ease alternate forwards;
+}
+
+header .name .L {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveO 0.5s 1.5s ease alternate forwards;
+}
+
+header .name .O {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveL 0.5s 2s ease alternate forwards;
+}
+
+header .name .K {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveA 0.5s 2.5s ease alternate forwards;
+}
+
+header .name .M {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveM 0.5s 3s ease alternate forwards;
+}
+
+header .name .A {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveK 0.5s 3.5s ease alternate forwards;
+}
+
+header .name .R {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveI 0.5s 4s ease alternate forwards;
+}
+
+header .name .I {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveB 0.5s 4.5s ease alternate forwards;
+}
+
+header .name .B {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveR 0.5s 5s ease alternate forwards;
+}
+
+header .name .A2 {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveI2 0.5s 5.5s ease alternate forwards;
+}
+
+header .name .I2 {
+    font-size: 35px;
+    opacity: 0;
+    animation: mymoveA2 0.5s 6s ease alternate forwards;
+}
+
+@keyframes mymoveG {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveO {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveL {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveA {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveM {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveK {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveI {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveB {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveR {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveI2 {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+@keyframes mymoveA2 {
+    from {opacity: 0; font-size: 35px;}
+    to {opacity: 1; font-size: 30px;}
+}
+
+.lecture-view {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.view-more {   
+    background-color: rgb(228, 228, 228);
+    color: black;
+    font-size: 14px;
+    padding: 9px 15px;
+    border-radius: 19px;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.view-more:hover {
+    background-color: rgb(209, 209, 209);;
+}
+.view-more:active {
+    color: white;
+    background-color: rgb(44, 44, 44);
+}
+
+.container {
+    background-color: #fff;
+    margin: 200px 0 0;
+    padding: 250px 0;
+}
+
+.container .lecture, .events {
+    margin-bottom: 500px;
+}
+
+.container h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container .information{
+    margin: 50px 0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.container .information .subcontainer, .subcontainer2, .subcontainer3 {
+    background-color: rgb(241, 241, 241);
+    width: 17%;
+    border-radius: 31px;
+    text-align: center;
+    padding: 0 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.274);
+    transition: all 0.3s ease;
+}
+
+.container .information h1 {
+    margin: 0;
+}
+
+.img h1 pre {
+    font-size: 19px;
+}
+
+.subcontainer2 {
+    width: 16%;
+    height: 270px;
+}
+
+.subcontainer3 {
+    width: 19%;
+    padding: 25px 0;    
+}
+
+.subcontainer3 h1 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.container .information .subcontainer:hover, .subcontainer2:hover, .subcontainer3:hover {
+    box-shadow: 0px 1px 15px 3px rgba(0, 0, 0, 0.315);
+    scale: 1.03;
+}
+
+.container .information .subcontainer img, .subcontainer2 img, .subcontainer3 img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.container .information .subcontainer p, .subcontainer2 p, .subcontainer3 p {
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.container .information .subcontainer button, .subcontainer2 button, .subcontainer3 button {
+    background-color: rgb(94, 179, 248);
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.container .information .subcontainer button:hover, .subcontainer2 button:hover, .subcontainer3 button:hover {
+    background-color: rgba(98, 185, 255, 0.774);
+}
+
+.container .information .subcontainer button:active, .subcontainer2 button:active, .subcontainer3 button:active {
+    background-color: rgb(158, 167, 173);
+}
+
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.144);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    padding: 0px;
+    height: 900px;
+    width: 400px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+    z-index: 999;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    height: 50px;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar a:hover {
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.menu {
+    display: none;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.918);
+    color: white;
+    padding: 25px 50px;
+}
+
+footer .info-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .left {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .left .motto p {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 21px;
+}
+
+footer .left .logo img{
+    height: 85px;
+    margin-bottom: 25px;
+}
+
+footer .right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+footer .right .links{
+    display: flex;
+    gap: 30px;
+}
+
+footer .right .links a {
+    transition: all 0.3s ease;
+}
+
+footer .right .links a:hover {
+    color: #52ff78;
+}
+
+footer .right .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .right .social .social-c {
+    
+    width: 50px;
+    height: 50px;
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+}
+
+footer .right .social i{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .right .social i:hover {
+    font-size: 50px;
+    color: #28f053;
+}
+
+footer .right a {
+    color: white;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 70px;
+}
+
+@media (max-width: 1400px) {
+    
+    .container h1 {
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .container .information{
+        margin: 50px 0;
+        padding: 0 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px 0px;
+    }
+    
+    .container .information .subcontainer, .subcontainer2, .subcontainer3 {
+        width: 23%;
+        text-align: center;
+        padding: 0 0 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+        box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.274);
+        transition: all 0.3s ease;
+    }
+    
+    .subcontainer {
+        scale: 0.9;
+    }
+
+    .container .information .subcontainer:hover {
+        box-shadow: 0px 1px 15px 3px rgba(0, 0, 0, 0.315);
+        scale: 0.93;
+    }
+
+
+    .subcontainer2 {
+        width: 18%;
+        height: 200px;
+    }
+    
+    .subcontainer3 {
+        width: 18%;
+        padding: 25px 0;    
+    }
+    
+    .subcontainer3 h1 {
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    .img h1 pre {
+        font-size: 17px;
+    }
+    
+    footer{
+        background-color: rgba(0, 0, 0, 0.918);
+        color: white;
+        padding: 25px 50px;
+    }
+    
+    footer .info-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    footer .left .logo img{
+        height: 85px;
+        margin-bottom: 20px;
+    }
+
+    footer .motto p {
+        font-size: 17px;
+    }
+    
+}
+
+@media(max-width: 800px) {
+    
+    header {
+        height: 71vh;
+    }
+    
+    .container .information{
+        margin: 50px 0;
+        padding: 0 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px 0px;
+    }
+    
+    .container .information .subcontainer, .subcontainer2, .subcontainer3 {
+        width: 45%;
+        text-align: center;
+        padding: 0 0 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+        box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.274);
+        transition: all 0.3s ease;
+    }
+    
+    .subcontainer {
+        scale: 0.9;
+    }
+
+    .container .information .subcontainer:hover {
+        box-shadow: 0px 1px 15px 3px rgba(0, 0, 0, 0.315);
+        scale: 0.93;
+    }
+
+
+    .subcontainer2 {
+        width: 30%;
+        height: 200px;
+    }
+    
+    .subcontainer3 {
+        width: 47%;
+        padding: 25px 0;    
+    }
+    
+    .subcontainer3 h1 {
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    .img h1 pre {
+        font-size: 17px;
+    }
+    
+    footer{
+        background-color: rgba(0, 0, 0, 0.918);
+        color: white;
+        padding: 25px 25px;
+    }
+    
+    footer .info-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    footer .left {
+        padding: 0 40px 0 0;
+    }
+    
+    footer .left .logo img{
+        height: 85px;
+        margin-bottom: 20px;
+    }
+
+    footer .info-container .right .links a {
+        font-size: 13px;
+    }
+
+    footer .motto p {
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 400px) {
+
+    nav {
+        padding: 0 19px;
+        height: 50px;
+    }
+
+    nav .logo {
+        font-size: 25px;
+    }
+    
+    .container .information .subcontainer {
+        background-color: rgb(241, 241, 241);
+        width: 100%;
+        border-radius: 31px;
+        text-align: center;
+        padding: 0 0 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+        box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.274);
+        transition: all 0.3s ease;
+    }
+
+    .subcontainer2, .subcontainer3 {
+        width: 100%;
+    }
+
+    .subcontainer3 h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container .headings {
+        margin-bottom: 50px;
+    }
+    
+    .container .information{
+        margin: 50px 0;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 95px 35px;
+    }
+    
+    .sidebar {
+        width: 100vh;
+        inset: 0 0 0 0;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    .hide {
+        display: none;
+    }
+
+    footer{
+        background-color: rgba(0, 0, 0, 0.918);
+        color: white;
+        padding: 25px 25px;
+    }
+    
+    footer .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 70px;
+    }
+    
+    footer .left {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer .left .motto p {
+        text-align: center;
+        font-size: 21px;
+    }
+    
+    footer .left .logo img{
+        height: 85px;
+        margin-bottom: 13px;
+    }
+    
+    footer .right {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    footer .right .links{
+        display: flex;
+        gap: 30px;
+    }
+    
+    footer .right .links a {
+        transition: all 0.3s ease;
+    }
+    
+    footer .right .links a:hover {
+        color: #52ff78;
+    }
+    
+    footer .right .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    footer .right .social .social-c {
+        
+        width: 50px;
+        height: 50px;
+        flex-direction: column-reverse;
+        display: flex;
+        align-items: center;
+    }
+    
+    footer .right .social i{
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    footer .right .social i:hover {
+        font-size: 50px;
+        color: #28f053;
+    }
+    
+    footer .right a {
+        color: white;
+    }
+    
+    footer .copyright {
+        font-size: 10px;
+    }    
+    
+}
